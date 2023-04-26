@@ -1,29 +1,51 @@
-import './navbar.scss';
-import  {useNavigate} from 'react'
-import {FontAwesomeIcon} from '@fortawesome/fontawesome-svg-core'
-import {faMoon, faSun } from '@fortawesome/free-regular-svg-icons'
-import {DarkModeContext} from '../../context/darkModeContext';
+import "./navbar.scss";
+import { Link, useNavigate } from "react-router-dom";
+// import { FontAwesomeIcon } from "@fortawesome/fontawesome-svg-core";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
+import { faMoon, faSun } from "@fortawesome/free-regular-svg-icons";
+import { useContext, useState, useEffect } from "react";
+import { DarkModeContext } from "../../context/darkModeContext";
 
 
-export default function navbar() {
-// const navigate = useNavigate
+const Navbar = () => {
+  const { toggle, darkMode } = useContext(DarkModeContext);
+  const navigate = useNavigate;
 
-// const logout = () => {
-//   navigate('/logout')
-// }
-
-// const {toggle, darkMode} = useContext (DarkModeContext);
-
+  const logout = () => {
+    navigate("/logout");
+  };
 
   return (
-    <div className='navbar'> 
-    <div className='navarFront'>
-      <div className='left'>
-
-    
+    <div className="navbar">
+      <div className="navarFront">
+        <div className="left">
+          <Link to="/" style={{ textDecoration: "none" }}>
+            <div className="logo">
+              <img src={require("../..//assets/logo.png")} alt="Noted" />
+              <h4>Noted</h4>
+            </div>
+          </Link>
+          {darkMode?(
+          <FontAwesomeIcon 
+          icon={faSun}
+          onClick={toggle}
+          className="faIcon"
+          size="lg"
+          fixedWidth
+          />
+          ) : (
+            <FontAwesomeIcon 
+            icon={faMoon}
+          onClick={toggle}
+          className="faIcon"
+          size="lg"
+          fixedWidth
+          />
+          )}
+        </div>
+      </div>
     </div>
-    </div>
-    </div>
-
-  )
-}
+  );
+};
+export default Navbar;

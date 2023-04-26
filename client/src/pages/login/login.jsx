@@ -1,11 +1,8 @@
 import React from "react";
 import { useState } from "react";
+import "./login.scss";
 
-
-export default function login() {
-
-  // const [email, setEmail] = useState("")
-
+export default function Login() {
   return (
     <div className="login-section">
       <div className="login-header-box">
@@ -13,17 +10,29 @@ export default function login() {
 
         <div className="form-box">
           <form className="form-container">
-            <label>
-              Email:
-              <input type="text" name="email" placeholder="Email" />
-            </label>
+            <ul>
+              <li>
+                <label>
+                  Email:
+                  <input type="text" name="email" placeholder="Email" />
+                </label>
+              </li>
 
-            <label>
-              Password:
-              <input type="password" name="password" placeholder="Password" />
-            </label>
+              <li>
+                <label>
+                  Password:
+                  <input
+                    type="password"
+                    name="password"
+                    placeholder="Password"
+                  />
+                </label>
+              </li>
 
-            <input type="submit" value="Submit" />
+              <li>
+                <input type="submit" value="Submit" />
+              </li>
+            </ul>
           </form>
         </div>
       </div>

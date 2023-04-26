@@ -1,17 +1,16 @@
-import './App.css';
-import { Routes, Route, BrowserRouter } from 'react-router-dom' 
+import "./App.css";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
 
 //pages
-import Home from './pages/home/home'
-import Profile from './pages/profile/profile'
-import Login from './pages/login/login'
-import Logout from './pages/signup/signup'
+import Home from "./pages/home/home";
+import Profile from "./pages/profile/profile";
+import Login from "./pages/login/login";
+import Signup from "./pages/signup/signup";
 
 //components
-import NavBar from './components/navBar/navbar'
-import Note from './components/Note/note'
-
-
+import Layout from "./components/Layout/layout";
+import NavBar from "./components/NavBar/navbar";
+import Note from "./components/Note/note";
 
 function App() {
   return (
@@ -20,12 +19,16 @@ function App() {
     // </div>
     <>
       <BrowserRouter>
+        <NavBar />
         <Routes>
-            <Route path="/" element={<Home />}/>
-            <Route path='/profile' element={<Profile />} />
-            <Route path='/login' element={<Login />} />
-            <Route path='/logout' element={<Logout />} />
-            <Route path='/note' element={<Note />} />
+          <Route element={<Layout />}> 
+            <Route path="/" element={<Home />} />
+            <Route path="/profile" element={<Profile />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<Signup />} />
+            <Route path="/note" element={<Note />} />
+
+          </Route> 
         </Routes>
       </BrowserRouter>
     </>
@@ -33,4 +36,3 @@ function App() {
 }
 
 export default App;
-
