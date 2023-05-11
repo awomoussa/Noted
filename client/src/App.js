@@ -8,7 +8,6 @@ import Login from "./pages/login/login";
 import Signup from "./pages/signup/signup";
 
 //components
-import Layout from "./components/Layout/layout";
 import NavBar from "./components/NavBar/navbar";
 import Note from "./components/Note/note";
 
@@ -21,14 +20,11 @@ function App() {
       <BrowserRouter>
         <NavBar />
         <Routes>
-          <Route element={<Layout />}> 
             <Route path="/" element={<Home />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/note" element={<Note />} />
-
-          </Route> 
         </Routes>
       </BrowserRouter>
     </>

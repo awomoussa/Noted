@@ -1,9 +1,9 @@
 import "./navbar.scss";
 import { Link, useNavigate } from "react-router-dom";
-// import { FontAwesomeIcon } from "@fortawesome/fontawesome-svg-core";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-import { faMoon, faSun } from "@fortawesome/free-regular-svg-icons";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMoon, faSun } from '@fortawesome/free-regular-svg-icons';
+
 import { useContext, useState, useEffect } from "react";
 import { DarkModeContext } from "../../context/darkModeContext";
 
