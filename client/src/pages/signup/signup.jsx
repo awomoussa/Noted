@@ -1,17 +1,19 @@
-import React from 'react'
+import React from "react";
+import "./signup.scss"
+import { Link } from "react-router-dom";
 
 export default function Signup() {
   return (
     <div className="signup-section">
-      <div className="signup-header-box">
-        <h1 className="signup-header">signup</h1>
+      <div className="signup-box">
+        <h1 className="signup-header">Sign Up</h1>
 
         <div className="form-box">
           <form className="form-container">
             <ul>
-            <li>
+              <li>
                 <label>
-                  First name:
+                  First Name:
                   <input type="text" name="text" placeholder="First Name" />
                 </label>
               </li>
@@ -41,12 +43,18 @@ export default function Signup() {
               </li>
 
               <li>
-                <input type="submit" value="Submit" />
+                <input className="button" type="submit" value="Submit" />
               </li>
             </ul>
           </form>
         </div>
       </div>
+
+      <div className="text-zone">
+        <p>
+          Already have an account? <Link to="/login"> Login in here!</Link>
+        </p>
+      </div>
     </div>
-  )
+  );
 }

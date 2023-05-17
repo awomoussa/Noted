@@ -8,7 +8,7 @@ import Login from "./pages/login/login";
 import Signup from "./pages/signup/signup";
 
 //components
-import NavBar from "./components/NavBar/navbar";
+// import NavBar from "./components/NavBar/navbar";
 import Note from "./components/Note/note";
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
     // </div>
     <>
       <BrowserRouter>
-        <NavBar />
+        {/* <NavBar /> */}
         <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/profile" element={<Profile />} />
