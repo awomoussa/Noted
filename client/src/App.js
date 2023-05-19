@@ -6,19 +6,23 @@ import Home from "./pages/home/home";
 import Profile from "./pages/profile/profile";
 import Login from "./pages/login/login";
 import Signup from "./pages/signup/signup";
-
+import { DarkModeContext } from "./context/darkModeContext";
 //components
-import NavBar from "./components/NavBar/navbar";
+import Navbar from "./components/navBar/navbar"
+
 import Note from "./components/Note/note";
 
 function App() {
+
+  const { DarkModeContext } = useContext(DarkModeContext);
+
   return (
     // <div className="App">
     //   <h1>HELLO!</h1>
     // </div>
     <>
       <BrowserRouter>
-        <NavBar />
+        <Navbar />
         <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/profile" element={<Profile />} />
