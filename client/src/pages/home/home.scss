@@ -38,25 +38,35 @@ body {
   .hero-text{
     flex:1;
   }
+}
 
+.hero-image{
+  overflow: hidden;
+  max-width: 600px;
+  max-height: 600px;
 }
 
 .howto-section {
   border: 2px solid black;
   padding: 2rem;
   margin-top: 20px;
+  background-color: #BBD6B8;
 }
 
 .howto-steps{
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  gap: 6rem;
 
   .step1, .step2, .step3{
     border: 2px solid black;
     height: 90px;
     width: 90px;
-    border-radius: 10px;
-  
+    border-radius: 5px;
     background-color: white;
+    margin-bottom: 15px;
+    rotate: 60deg;
+
+    
   }
 }
