@@ -23,9 +23,9 @@ export default function Home() {
             <div className="step3">STEP 3 box</div>
           </div>
           <div className="howto-steps">
-            <div className="">STEP 1 instructions</div>
-            <div className="">STEP 2 instructionsox</div>
-            <div className="">STEP 3 instructions</div>
+            <div className="">Create, Edit, or Delete Notes</div>
+            <div className="">Stay organized</div>
+            <div className="">Create folders</div>
           </div>
         </div>
 
