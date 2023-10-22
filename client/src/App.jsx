@@ -9,18 +9,16 @@ import Signup from "./pages/signup/signup";
 
 //components
 // import NavBar from "./components/NavBar/navbar";
+import Layout from "./layout/layout"
 import Note from "./components/Note/note";
 
 function App() {
   return (
-    // <div className="App">
-    //   <h1>HELLO!</h1>
-    // </div>
     <>
       <BrowserRouter>
-        {/* <NavBar /> */}
         <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<Layout />} />
+            <Route index element={<Home />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />

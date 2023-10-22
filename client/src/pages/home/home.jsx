@@ -1,35 +1,37 @@
 import React from "react";
-import "./home.scss"
 import home from "../../assets/home.jpg"
+import { Button, Flex, Image } from '@chakra-ui/react'
+import { Heading } from "@chakra-ui/react";
+import { Link } from "@chakra-ui/react";
+import { Stack } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
+import { Text } from "@chakra-ui/react";
+
 
 export default function Home() {
   return (
-    <section className="main-container">
-      <div className="content">
-        <div className="hero-section">
-          <h1>Simplify Your Notes</h1>
-          <div className="hero-content">
-          <div className="hero-image">
-            <img src={home}></img>
-          </div>
-          <p className="hero-text">Noted - the perfect note-taking app where every idea, is duly noted.</p>
-          </div>
-        </div>
+    <Flex align="center"
+    justify="space-around"
+    wrap="no-wrap"
+     minH="70vh"
+    >
+      <Stack
+        spacing={4}
+        direction='column'
+        mr={2}
+        >
+      <Heading as="h1">Simplify Your Notes</Heading>
+      <Text >Noted - the perfect note-taking app where every idea, is duly noted.</Text>
+      <Link>
+        <Button>
+          Sign Up
+        </Button>
+      </Link>
+    </Stack>
+    <Box maxW='sm'>
+      <Image src={home} size="100%" rounded="1rem" shadow="2xl"/>
+    </Box>
+    </Flex>
 
-        <div className="howto-section">
-          <div className="howto-steps">
-            <div className="step1">STEP 1 box</div>
-            <div className="step2">STEP 2 box</div>
-            <div className="step3">STEP 3 box</div>
-          </div>
-          <div className="howto-steps">
-            <div className="">Create, Edit, or Delete Notes</div>
-            <div className="">Stay organized</div>
-            <div className="">Create folders</div>
-          </div>
-        </div>
-
-      </div>
-    </section>
   );
 }
