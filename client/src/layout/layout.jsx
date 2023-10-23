@@ -1,6 +1,6 @@
 import React from "react"
 import { Flex } from "@chakra-ui/react"
-// import NavBar from "../components/NavBar"
+import Home from "../pages/home/home"
 // import Footer from "../components/Footer" // will add this in the part 2
 
 export default function LandingLayout(props) {
@@ -12,7 +12,7 @@ export default function LandingLayout(props) {
       m="0 auto"
       {...props}
     >
-      {/* <NavBar /> */}
+      {/* <Home/> */}
       {props.children}
     </Flex>
   )
