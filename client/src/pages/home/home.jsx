@@ -28,7 +28,8 @@ export default function Home() {
       <Button colorScheme='teal'>
         <Link as={ReactRouterLink} to="/profile"> 
         Button
-        </Link></Button>
+        </Link>
+        </Button>
       </Link>
     </Stack>
     <Box maxW='sm'>

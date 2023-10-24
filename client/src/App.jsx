@@ -9,23 +9,22 @@ import Signup from "./pages/signup/signup";
 
 //components
 // import NavBar from "./components/NavBar/navbar";
-import Layout from "./layout/layout"
+import Layout from "./layout/layout";
 import Note from "./components/Note/note";
 
 function App() {
   return (
-    <>
-      <BrowserRouter>
-        <Routes>
-            <Route path="/" element={<Layout />} />
-            <Route index element={<Home />} />
-            <Route path="/profile" element={<Profile />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/signup" element={<Signup />} />
-            <Route path="/note" element={<Note />} />
-        </Routes>
-      </BrowserRouter>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/note" element={<Note />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
