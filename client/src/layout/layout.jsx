@@ -12,7 +12,7 @@ export default function LandingLayout(props) {
       m="0 auto"
       {...props}
     >
-      {/* <Home/> */}
+      <Home/>
       {props.children}
     </Flex>
   )

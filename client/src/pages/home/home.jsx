@@ -1,6 +1,8 @@
 import React from "react";
 import home from "../../assets/home.jpg"
 import { Button, Flex, Image } from '@chakra-ui/react'
+import { Link as ReactRouterLink } from 'react-router-dom'
+
 import { Heading } from "@chakra-ui/react";
 import { Link } from "@chakra-ui/react";
 import { Stack } from "@chakra-ui/react";
@@ -23,9 +25,10 @@ export default function Home() {
       <Heading as="h1">Simplify Your Notes</Heading>
       <Text >Noted - the perfect note-taking app where every idea, is duly noted.</Text>
       <Link>
-        <Button>
-          Sign Up
-        </Button>
+      <Button colorScheme='teal'>
+        <Link as={ReactRouterLink} to="/profile"> 
+        Button
+        </Link></Button>
       </Link>
     </Stack>
     <Box maxW='sm'>
