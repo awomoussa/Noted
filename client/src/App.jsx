@@ -1,30 +1,34 @@
 import "./App.css";
-import { Routes, Route, BrowserRouter } from "react-router-dom";
+import { Routes, Route, BrowserRouter, createBrowserRouter, createRoutesFromElements, RouterProvider } from "react-router-dom";
 
 //pages
-import Home from "./pages/home/home";
-import Profile from "./pages/profile/profile";
-import Login from "./pages/login/login";
-import Signup from "./pages/signup/signup";
+import Home from "./pages/Home";
+import Dashboard from "./pages/Dashboard";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
+import Create from "./pages/Create"
 
 //components
-// import NavBar from "./components/NavBar/navbar";
 import Layout from "./layout/layout";
-import Note from "./components/Note/note";
+import { notesLoader } from "./pages/Dashboard";
+
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="/dashboard" element={<Dashboard />}  loader={notesLoader}/>
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/create" element={<Create />} />
+        </Route>
+
+  )
+)
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="/profile" element={<Profile />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<Signup />} />
-          <Route path="/note" element={<Note />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    <RouterProvider router={router} />
   );
 }
 

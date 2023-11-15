@@ -1,5 +1,5 @@
 import React from "react";
-import home from "../../assets/home.jpg"
+import home from "../assets/home.jpg"
 import { Button, Flex, Image } from '@chakra-ui/react'
 import { Link as ReactRouterLink } from 'react-router-dom'
 
@@ -26,7 +26,7 @@ export default function Home() {
       <Text >Noted - the perfect note-taking app where every idea, is duly noted.</Text>
       <Link>
       <Button colorScheme='teal'>
-        <Link as={ReactRouterLink} to="/profile"> 
+        <Link as={ReactRouterLink} to="/dashboard"> 
         Button
         </Link>
         </Button>

@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMoon, faSun } from '@fortawesome/free-regular-svg-icons';
 
 import { useContext, useState, useEffect } from "react";
-import { DarkModeContext } from "../../context/darkModeContext";
+import { DarkModeContext } from "../context/darkModeContext";
 
 
 const Navbar = () => {
