@@ -21,7 +21,7 @@ export default function Dashboard() {
 
   return (
     <>
-    <Box 
+    {/* <Box 
     // display="flex" 
     alignContent="center" 
     w="75%"
@@ -43,7 +43,7 @@ export default function Dashboard() {
           </TabPanel>
         </TabPanels>
       </Tabs>
-      </Box>
+      </Box> */}
 
       <SimpleGrid
         padding={10}
@@ -60,9 +60,11 @@ export default function Dashboard() {
               <Text>{note.text}</Text>
             </CardBody>
             <CardFooter>
+            <Link to={`/notes/${note.id}`}>
               <Button variant="ghost" rightIcon={<ViewIcon />}>
                 View note
               </Button>
+              </Link>
             </CardFooter>
           </Card>
         ))}

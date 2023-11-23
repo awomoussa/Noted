@@ -7,6 +7,9 @@ import Dashboard from "./pages/Dashboard";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Create from "./pages/Create"
+import NoteDetails from "./pages/NoteDetails"
+
+
 
 //components
 import Layout from "./layout/layout";
@@ -18,6 +21,7 @@ const router = createBrowserRouter(
     <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="/dashboard" element={<Dashboard />}  loader={notesLoader}/>
+          <Route path="/notes/:id" element={<NoteDetails />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/create" element={<Create />} />
