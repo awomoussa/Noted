@@ -26,7 +26,6 @@ export default function Dashboard() {
         spacing={8}
         templateColumns="repeat(auto-fill, minmax(300px, 1fr))"
       >
-        {/* <Note /> */}
         {notes.map((note) => (
           <Card key={note.id} bg="pink">
             <CardHeader>
