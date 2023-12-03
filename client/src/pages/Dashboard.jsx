@@ -1,24 +1,30 @@
-import React from "react";
-import Note from "../components/note";
-// import { SimpleGrid } from "@chakra-ui/react";
+import {useState, useEffect} from "react";
 import { Link as ReactRouterLink } from "react-router-dom";
-import { Button, Box, Link, SimpleGrid, Heading, Text } from "@chakra-ui/react";
+import { Button, Link, SimpleGrid, Heading } from "@chakra-ui/react";
 import { Card, CardHeader, CardBody, CardFooter } from "@chakra-ui/react";
-import { EditIcon, ViewIcon } from "@chakra-ui/icons";
-import { Tabs, TabList, TabPanels, Tab, TabPanel } from "@chakra-ui/react";
+import { ViewIcon } from "@chakra-ui/icons";
 
-import { useLoaderData } from "react-router-dom";
 
 export default function Dashboard() {
-  //this is the destructuring statement
-  const { notes } = useLoaderData(); // It's a shorthand way of writing const notes = useLoaderData().notes; accesing the object with dot notation
-  console.log("Notes:", notes);
+  const [notes, setNotes] = useState([]) //you should initialize the notes state as an empty array [] to avoid potential map errors 
+  const getData = () => {
+    const requestOption = {
+      method: "GET",
+    };
 
-  if (!notes || !Array.isArray(notes)) {
-    //The conditional check ensures that before attempting to use the .map() function
-    return <div>No notes available.</div>; //or perform operations on the 'notes' array, it is both existing and of the expected array type.
-  }
+    fetch("http://localhost:3000/notes", requestOption)
+    .then((res)=> res.json())
+    .then((result) => setNotes(result))
+    .catch((error) => console.log("Error in data fetching:", error))
+  };
 
+  useEffect(() => {
+    getData();
+  }, [])
+  
+  console.log("NOTES:", notes)
+
+  const maxNoteLength = 50
   return (
     <>
       <SimpleGrid
@@ -27,17 +33,17 @@ export default function Dashboard() {
         templateColumns="repeat(auto-fill, minmax(300px, 1fr))"
       >
         {notes.map((note) => (
-          <Card key={note.id} bg="pink">
+          <Card size="sm" key={note.id} bg="pink">
             <CardHeader>
-              <Heading size="md">{note.title}</Heading>
+              <Heading size="md">{note.id}) {note.title}</Heading>
             </CardHeader>
             <CardBody>
-              <Text>{note.text}</Text>
+              {note.text.length > maxNoteLength ? `${note.text.substring(0, maxNoteLength)}....` : note.text}
             </CardBody>
             <CardFooter>
               <Link as={ReactRouterLink} to={`/notes/${note.id}`}>
                 <Button variant="ghost" rightIcon={<ViewIcon />}>
-                  View Note Here
+                  View Full Note Here
                 </Button>
               </Link>
             </CardFooter>
@@ -47,9 +53,3 @@ export default function Dashboard() {
     </>
   );
 }
-
-export const notesLoader = async () => {
-  const res = await fetch("http://localhost:3000/notes");
-  const data = await res.json(); // Assuming the data is in JSON format
-  return { notes: data };
-};

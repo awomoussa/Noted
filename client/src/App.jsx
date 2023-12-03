@@ -13,14 +13,14 @@ import NoteDetails from "./pages/NoteDetails"
 
 //components
 import Layout from "./layout/layout";
-import { notesLoader } from "./pages/Dashboard";
+// import { notesLoader } from "./pages/Dashboard";
 
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="/dashboard" element={<Dashboard />}  loader={notesLoader}/>
+          <Route path="/dashboard" element={<Dashboard />}  />
           <Route path="/notes/:id" element={<NoteDetails />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />

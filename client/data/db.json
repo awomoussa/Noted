@@ -3,62 +3,52 @@
     {
       "id": 1,
       "title": "Fix the navbar",
-      "text": "There is an issue with the navbar on the homepage. It is not displaying correctly on mobile devices.",
-      "user_id": 1
+      "text": "There is an issue with the navbar on the homepage. It is not displaying correctly on mobile devices."
     },
     {
       "id": 2,
       "title": "Add links to the footer",
-      "text": "The footer is currently empty. We need to add some links to important pages on the site.",
-      "user_id": 1
+      "text": "The footer is currently empty. We need to add some links to important pages on the site."
     },
     {
       "id": 3,
       "title": "Update the contact form",
-      "text": "The contact form is not working properly. We need to fix the form validation and make sure the form submissions are being sent to the correct email address.",
-      "user_id": 1
+      "text": "The contact form is not working properly. We need to fix the form validation and make sure the form submissions are being sent to the correct email address."
     },
     {
       "id": 4,
       "title": "Improve the site's performance",
-      "text": "The site is currently running slow. We need to optimize images and minify CSS and JavaScript to improve the site's loading speed.",
-      "user_id": 1
+      "text": "The site is currently running slow. We need to optimize images and minify CSS and JavaScript to improve the site's loading speed."
     },
     {
       "id": 5,
       "title": "Add social media links",
-      "text": "There are no links to our social media profiles on the site. We need to add links to our Facebook, Twitter, and Instagram accounts in the header and footer.",
-      "user_id": 1
+      "text": "There are no links to our social media profiles on the site. We need to add links to our Facebook, Twitter, and Instagram accounts in the header and footer."
     },
     {
       "id": 6,
       "title": "Implement a search feature",
-      "text": "The site does not have a search feature. We need to add a search bar in the header that allows users to search for specific pages or products on the site.",
-      "user_id": 1
+      "text": "The site does not have a search feature. We need to add a search bar in the header that allows users to search for specific pages or products on the site."
     },
     {
       "id": 7,
       "title": "Fix the responsive layout",
-      "text": "The site's layout is not responsive. It does not look good on mobile devices. We need to make sure the site looks good on all devices.",
-      "user_id": 1
+      "text": "The site's layout is not responsive. It does not look good on mobile devices. We need to make sure the site looks good on all devices."
     },
     {
       "id": 8,
       "title": "Add a newsletter signup form",
-      "text": "We do not have a way for users to sign up for our newsletter. We need to add a newsletter signup form in the footer that allows users to enter their email address.",
-      "user_id": 1
+      "text": "We do not have a way for users to sign up for our newsletter. We need to add a newsletter signup form in the footer that allows users to enter their email address."
     },
     {
       "id": 9,
       "title": "Improve the design",
-      "text": "The site's design is outdated. We need to update the site's color scheme and font to make it look more modern.",
-      "user_id": 1
+      "text": "The site's design is outdated. We need to update the site's color scheme and font to make it look more modern."
     },
     {
       "id": 10,
       "title": "Add more products to the online store",
-      "text": "We need to add more products to the online store. We also need to add categories and filters to make it easier for users to find what they are looking for.",
-      "user_id": 1
+      "text": "We need to add more products to the online store. We also need to add categories and filters to make it easier for users to find what they are looking for."
     }
   ]
 }

@@ -1,7 +1,9 @@
 import React from "react";
 import { useState } from "react";
+import { Form, redirect } from "react-router-dom"
+
+
 import {
-  Form,
   FormControl,
   FormLabel,
   FormErrorMessage,
@@ -31,6 +33,8 @@ function Create() {
 
   return (
     <Box display="flex" flexDirection="column" mb="40px" padding="60px">
+      <Form method="post" action="/create">
+
       <FormControl mb="40px">
         <FormLabel isRequired>Title</FormLabel>
         <Input 
@@ -51,10 +55,25 @@ function Create() {
           onChange={handleTextChange}
         ></Textarea>
 
-        <Button type="submit">Submit</Button>
+        <Button onSubmit={createAction} type="submit">Submit</Button>
       </FormControl>
+      </Form>
     </Box>
   );
 }
 
 export default Create;
+
+export const createAction = async ({ request }) => {
+  const data = await request.formData()
+
+  const note = {
+    title: data.get("title"),
+    text: data.get("text"),    
+  }
+
+  console.log("NEW NOTE:",note)
+
+  return redirect("/dashboard")
+}
+ 

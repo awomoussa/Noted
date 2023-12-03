@@ -6,7 +6,7 @@ import { HStack } from "@chakra-ui/react";
 
 export default function Navbar2() {
   return (
-    <Flex as="nav" wrap="wrap" p="10px" alignItems="center">
+    <Flex as="nav" wrap="wrap" p="20px" alignItems="center">
       <Link to="/">
         <Heading as="h1">Noted</Heading>
       </Link>
