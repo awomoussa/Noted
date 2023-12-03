@@ -21,30 +21,6 @@ export default function Dashboard() {
 
   return (
     <>
-      {/* <Box 
-    // display="flex" 
-    alignContent="center" 
-    w="75%"
-    >
-      <Tabs align="end" variant="enclosed">
-        <TabList>
-          <Tab>One</Tab>
-          <Tab>Two</Tab>
-        </TabList>
-        <TabPanels>
-          <TabPanel>
-            <p>one!</p>
-            <p>one!</p>
-            <p>one!</p>
-            <p>one!</p>
-          </TabPanel>
-          <TabPanel>
-            <p>two!</p>
-          </TabPanel>
-        </TabPanels>
-      </Tabs>
-      </Box> */}
-
       <SimpleGrid
         padding={10}
         spacing={8}

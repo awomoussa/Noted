@@ -40,7 +40,7 @@ function NoteDetails() {
       <Card key={note.id} bg="pink">
         <CardHeader>
           <Heading size="md">
-            {note.id}) {note.title}
+            {note.id} {note.title}
           </Heading>
         </CardHeader>
         <CardBody>
