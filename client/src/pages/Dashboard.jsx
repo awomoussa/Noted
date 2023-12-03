@@ -5,7 +5,7 @@ import { Link as ReactRouterLink } from "react-router-dom";
 import { Button, Box, Link, SimpleGrid, Heading, Text } from "@chakra-ui/react";
 import { Card, CardHeader, CardBody, CardFooter } from "@chakra-ui/react";
 import { EditIcon, ViewIcon } from "@chakra-ui/icons";
-import { Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/react'
+import { Tabs, TabList, TabPanels, Tab, TabPanel } from "@chakra-ui/react";
 
 import { useLoaderData } from "react-router-dom";
 
@@ -21,7 +21,7 @@ export default function Dashboard() {
 
   return (
     <>
-    {/* <Box 
+      {/* <Box 
     // display="flex" 
     alignContent="center" 
     w="75%"
@@ -60,10 +60,10 @@ export default function Dashboard() {
               <Text>{note.text}</Text>
             </CardBody>
             <CardFooter>
-            <Link to={`/notes/${note.id}`}>
-              <Button variant="ghost" rightIcon={<ViewIcon />}>
-                View note
-              </Button>
+              <Link as={ReactRouterLink} to={`/notes/${note.id}`}>
+                <Button variant="ghost" rightIcon={<ViewIcon />}>
+                  View Note Here
+                </Button>
               </Link>
             </CardFooter>
           </Card>
