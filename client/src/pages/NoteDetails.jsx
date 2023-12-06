@@ -1,8 +1,7 @@
-import { CardFooter, Heading } from "@chakra-ui/react";
+import { CardFooter, Heading, Link } from "@chakra-ui/react";
 import { useState, useEffect } from "react";
 import { EditIcon, ViewIcon } from "@chakra-ui/icons";
-
-import { useParams, Link as ReactRouterLink } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import {
   Box,
   Button,
@@ -52,14 +51,12 @@ function NoteDetails() {
         <CardBody>
           <Text>{note.text}</Text>
         </CardBody>
-          <Button
-            as={ReactRouterLink}
-            to="/dashboard"
-            variant="ghost"
-            rightIcon={<EditIcon />}
-          >
+
+        <Link to={`/edit/${note.id}`}>
+          <Button variant="ghost" rightIcon={<EditIcon />}>
             Edit
           </Button>
+        </Link>
       </Card>
     </Box>
   );

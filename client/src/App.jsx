@@ -8,6 +8,8 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Create from "./pages/Create"
 import NoteDetails from "./pages/NoteDetails"
+import Edit from "./pages/Edit"
+
 
 
 
@@ -25,6 +27,8 @@ const router = createBrowserRouter(
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/create" element={<Create />} />
+          <Route path="/edit/:id" element={<Edit />} />
+
         </Route>
 
   )
